@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title calc
+    link(rel='stylesheet', href='/css/home.css')
+  body
+    h1 Calculator!
+    if x
+      h3 Answer #{x} #{op} #{y} = #{ans}
+    // text box calculator
+    form(method='post', action='/calc')
+      textarea(name='testbox')
+      label -
+      input(type='text', name='x', placeholder='Enter #  Here', autofocus=true)
+      select(name='op')
+        option +
+        option -
+        option *
+        option /
+      label -
+      input(type='text', name='y', placeholder='Enter # Here')
+      button Compute
+
+

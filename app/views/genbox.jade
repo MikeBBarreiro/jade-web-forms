@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Make a Box!
+    link(rel='stylesheet', href='/css/home.css')
+  body
+    h1 Here is your box ARMY!
+
+    a(class='button', href="/box") Click here to make anohter Box!
+    while boxNum
+      - boxNum--
+      - var index = Math.floor(Math.random() * bgColor.length)
+      - var color = bgColor[index]
+      - var width = Math.floor(Math.random() * (widths[1] - widths[0] + 1 )) + widths[0]
+      - var height = Math.floor(Math.random() * (heights[1] - heights[0] + 1)) + heights[0]
+
+      .colors(style='background-color:#{color}; width:#{width}px; height:#{height}px; float: left;')

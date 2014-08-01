@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Make a Box!
+    link(rel='stylesheet', href='/css/home.css')
+  body
+    h1.header Make a Box!
+    form(method='post', action='/genbox')
+      label Number of box's
+      input(type='text', name='a', placeholder='Enter # here', autofocuz=true)
+      label Width of Box's
+      input(type='text', name='b', placeholder='Enter Width here')
+      label Height of Box's
+      input(type='text', name='c', placeholder='Enter Height here')
+
+      textarea(name='d') blue, pink, red, yellow, cyan, blue, black, gray, brown, green, purple, olive
+      button Generate!

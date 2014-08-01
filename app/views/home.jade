@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Jade/Web Forms
+    link(rel='stylesheet', href='/css/home.css')
+  body
+    h1= Math.pow(8, 2)
+    - var x = 3, y = 2
+    h2= x * y
+    // this is a public comment
+    //- this is a private comment
+    h1.a.b.c#d.e Hello, Jade
+    //- arrays and loops
+    - var colors = ['blue','green','yellow','pink']
+    //- for loop
+    each color in colors
+      if color === 'green'
+        h1 I love green
+      else
+        h2 Blah! ..no green..
+      .color(style='color: #{color};')= color
+
+    //- div's with Id's and class's
+    #x
+      #y
+        #z
+          .a
+            .b
+              .c this is crazyyyyyYYyyYYyy
+
+    h2 This is an H2
+    section
+      article
+        h3 hey h3!
+        p p1
+        p p2
+        p
+          |This is text
+          spant more test
+          | and more test
+          span final text
+          a(href="#") dead link
+          span hello world
